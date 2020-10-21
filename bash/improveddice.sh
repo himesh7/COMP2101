@@ -21,3 +21,7 @@ die1=$(( RANDOM % 10 + 1))
 die2=$(( RANDOM % 10 + 1 ))
 # display the results
 echo "Rolled $die1, $die2"
+sum=$((die1 + die2))
+echo "sum" $sum
+
+echo "average=" $((sum/2))
