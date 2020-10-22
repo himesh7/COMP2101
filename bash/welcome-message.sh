@@ -17,15 +17,46 @@
 ###############
 # Variables   #
 ###############
-title="Overlord"
-myname="dennis"
-hostname="myhostname"
+title="lab2"
+myname="Nimesh"
+hostname="COMP2101"
 
 ###############
 # Main        #
 ###############
-cat <<EOF
 
-Welcome to planet $hostname, "$title $myname!"
+
+
+time=$('date' '+%r')
+DAYOFWEEK=$(date +"%u")
+
+if [ "$DAYOFWEEK" == 1 ]
+then
+   date="The White One"
+
+elif [ "$DAYOFWEEK" == 2 ]
+then
+   date="The Red One"
+
+elif [ "$DAYOFWEEK" == 3 ]
+then
+   date="Two Thunders"
+
+ elif [ "$DAYOFWEEK" == 4 ]
+ then
+   date="Šamhureš"
+
+ elif [ "$DAYOFWEEK" == 5 ]
+ then
+   date="Cyclone"
+
+ elif [ "$DAYOFWEEK" == 6 ]
+ then
+   date="Prosperous"
+
+fi
+cat <<EOF
+Welcome to planet "$hostname", "$title $myname!"
+Today is "$date" at "$time"
 
 EOF
