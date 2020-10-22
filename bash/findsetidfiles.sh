@@ -20,11 +20,11 @@ echo "============="
 find / -type f -executable -perm -4000 -ls 2>/dev/null | sort -k 5
 echo ""
 
-echo "12 Largest Files:"
-echo "==============="
-find / -type f -exec du -h {} + 2>/dev/null | sort -h -r| head -n 12
-echo ""
 # for the task, add
 # commands to display a title
+echo "12 Largest Files:"
+echo "==============="
 # commands to make a list of the 12 biggest files
+find / -type f -exec du -h {} + 2>/dev/null | sort -h -r| head -n 12
 # sort/format whatever to display the list properly
+echo ""
