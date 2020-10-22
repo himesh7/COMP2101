@@ -19,10 +19,12 @@ $firstnum divided by $secondnum is $dividend
   - More precisely, it is $fpdividend
 EOF
 
-ask 1: Remove the assignments of numbers to the first and second number variables. Use one or more read commands to get 3 numbers from the user
+#Remove the assignments of numbers to the first and second number variables. Use one or more read commands to get 3 numbers from the user
 echo ""
 Prompt="Please Enter Three Numbers: "
-read -p "$Prompt" one two three
+read -p "$Prompt" one
+read -p "$Prompt" two
+read -p "$Prompt" three
 echo "You entered $one, $two, $three"
 
 # Task 2: Change the output to only show:
