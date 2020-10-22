@@ -18,7 +18,9 @@ rm -rf ~/public_html/pics
 mkdir -p ~/public_html/pics || (echo "Failed to make a new pics directory" && exit 1)
 
 # download a zipfile of pictures to our Pictures directory - assumes you are online
+test -f ~/Pictures/pics.zip || wget -q -O ~/Pictures/pics.zip http://zonzorp.net/pics.zip
 # unpack the downloaded zipfile if the download succeeded - assumes we have an unzip command on this system
+test -f ~/Pictures/pics.zip && unzip -d ~/Pictures -o  -q ~/Pictures/pics.zip && rm ~/Pictures/pics.zip
 # delete the local copy of the zipfile after a successful unpack of the zipfile
 wget -q -O ~/public_html/pics/pics.zip http://zonzorp.net/pics.zip && unzip -d ~/public_html/pics -o -q ~/public_html/pics/pics.zip && rm ~/public_html/pics/pics.zip
 
